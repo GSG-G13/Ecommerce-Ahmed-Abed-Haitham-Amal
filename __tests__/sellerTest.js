@@ -8,8 +8,8 @@ const {
 } = require("../js/pureSeller.js");
 
 const products = [
-  { id: 1, name: "test", category: "pants", price: 10, image: "image" },
-  { id: 2, name: "test2", category: "pants2", price: 20, image: "image2" },
+  { id: 1, name: "test", category: "pants", price: 10 },
+  { id: 2, name: "test2", category: "pants2", price: 20 },
 ];
 
 describe("add product test", () => {
@@ -56,11 +56,10 @@ describe("edit product test", () => {
       name: "test3",
       category: "pants",
       price: 30,
-      image: "image3",
     });
     const expected = [
-      { id: 1, name: "test", category: "pants", price: 10, image: "image" },
-      { id: 2, name: "test3", category: "pants", price: 30, image: "image3" },
+      { id: 1, name: "test", category: "pants", price: 10 },
+      { id: 2, name: "test3", category: "pants", price: 30 },
     ];
     expect(actual).toEqual(expected);
   });
@@ -75,9 +74,7 @@ describe("delete product test", () => {
     { id: 1, name: "test", details: "details", price: 10 },
     ] if id = 2`, () => {
     const actual = deleteProduct(products, 2); //array, id
-    const expected = [
-      { id: 1, name: "test", category: "pants", price: 10, image: "image" },
-    ];
+    const expected = [{ id: 1, name: "test", category: "pants", price: 10 }];
     expect(actual).toEqual(expected);
   });
 });

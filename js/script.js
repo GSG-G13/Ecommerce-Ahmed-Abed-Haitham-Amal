@@ -1,26 +1,24 @@
-const  {
-    searchProducts,
-    priceFilter,
-    categoryFilter
-} = require ("../js/pureBuyer.js");
-
+// const  {
+//     searchProducts,
+//     priceFilter,
+//     categoryFilter
+// } = require ("../js/pureBuyer.js");
 
 // console.log(searchProducts);
-let productItems = JSON.parse(localStorage.getItem('products'));
-let priceBtn = document.querySelector('.prods-price');
-let categoryBtn = document.querySelector('.prods-category');
-let priceList = document.querySelector('.price-list');
-let priceRange = document.querySelectorAll('.price-list li');
-let categoryList = document.querySelector('.category-list');
-let categories = document.querySelectorAll('.category-list li');
-
+let productItems = JSON.parse(localStorage.getItem("products"));
+let priceBtn = document.querySelector(".prods-price");
+let categoryBtn = document.querySelector(".prods-category");
+let priceList = document.querySelector(".price-list");
+let priceRange = document.querySelectorAll(".price-list li");
+let categoryList = document.querySelector(".category-list");
+let categories = document.querySelectorAll(".category-list li");
 
 function displayProducts(productItems) {
-      const productContainer = document.querySelector(".prod-container");
-    if (!productItems) {
-        return;
-    } else {
-         productItems.forEach((product) => {
+  const productContainer = document.querySelector(".prod-container");
+  if (!productItems) {
+    return;
+  } else {
+    productItems.forEach((product) => {
       //   let productCard = document.createElement("div");
       //   productCard.classList.add("box");
       //   let productImg = document.createElement("div");
@@ -47,27 +45,26 @@ function displayProducts(productItems) {
       //   productCard.append(productInfo);
       //   productContainer.append(productCard);
     });
-    }
-    
+  }
 }
 
 priceRange.forEach((price) => {
-    let range = price.innerHTML.split('-'); //[m,m]
-    price.onclick = () => displayProducts(priceFilter(productItems, range[0], range[1]));
+  let range = price.innerHTML.split("-"); //[m,m]
+  price.onclick = () =>
+    displayProducts(priceFilter(productItems, range[0], range[1]));
 });
 
 searchButton.onclick = () => {
-    displayProducts(searchProducts(productItems, searchInput.value));
+  displayProducts(searchProducts(productItems, searchInput.value));
 };
 
-
 categories.forEach((category) => {
-    category.onclick = () => displayProducts(categoryFilter(productItems, category.innerHTML));
+  category.onclick = () =>
+    displayProducts(categoryFilter(productItems, category.innerHTML));
 });
 
 // toggle to show price dropdown list
-priceBtn.onclick = () => priceList.classList.toggle('Hidden');
+priceBtn.onclick = () => priceList.classList.toggle("Hidden");
 
 // toggle to show category dropdown list
-categoryBtn.onclick = () => categoryList.classList.toggle('Hidden');
-
+categoryBtn.onclick = () => categoryList.classList.toggle("Hidden");

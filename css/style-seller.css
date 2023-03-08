@@ -157,7 +157,7 @@ main .prods-parent-sorting .add i {
     text-align: center;
 }
 
-main .prods-parent-sorting form {
+main .prods-parent-sorting .form {
     display: flex;
     background-color: var(--gray-color);
     padding: 10px 20px;
@@ -166,7 +166,7 @@ main .prods-parent-sorting form {
     gap: 20px;
 }
 
-main .prods-parent-sorting form :first-child {
+main .prods-parent-sorting .form :first-child {
     border: none;
     padding: 10px;
     border-radius: 20px;
@@ -175,7 +175,7 @@ main .prods-parent-sorting form :first-child {
     width: 230px;
 }
 
-main .prods-parent-sorting form :last-child {
+main .prods-parent-sorting .form :last-child {
     border: none;
     padding: 10px;
     border-radius: 10px;

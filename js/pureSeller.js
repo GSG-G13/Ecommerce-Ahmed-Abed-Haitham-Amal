@@ -23,13 +23,12 @@ function editProducts(array, id, newProduct) {
     console.log(newProduct, "new product");
     const result = array.map((product) => {
       if (product.id == id) {
-        product.id = id;
         product.name = newProduct.name;
         product.category = newProduct.category;
         product.price = newProduct.price;
-        product.image = newProduct.image;
+        // product.image = newProduct.image;
       }
-      console.log(product, "product");
+      //   console.log(product, "product");
       return product;
     });
     return result;
