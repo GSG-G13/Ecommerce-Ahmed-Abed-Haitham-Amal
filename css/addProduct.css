@@ -126,7 +126,7 @@ main{
 main h2{
  font-size: 25px;
 }
-main form{
+main .form{
     display: flex;
     flex-direction: column;
     background-color: var(--gray-color);
@@ -135,10 +135,10 @@ main form{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
 }
-main form label{
+main .form label{
     color: var(--text-color);
 }
-main form input{
+main .form input{
     outline: none;
     height: 30px;
     border-radius: 5px;
