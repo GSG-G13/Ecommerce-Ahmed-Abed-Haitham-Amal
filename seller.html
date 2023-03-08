@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/remixicon.css">
+    <link rel="stylesheet" href="css/style-seller.css">
+    <title>Seller</title>
+</head>
+<body>
+        <Section id="header">
+            <!--i need apropriate logo to add instead of this-->
+            <a href="#"><img src="/images/Logo.png" class="logo" alt=""></a>
+        
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <!--Here, we will ad the links after we make the products, cart, and userbar html files, so I'll leav thme without links for now-->
+                    <!--the links here are not real they are just placeholders-->
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html" id="lg-bag"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+                    <a href="#" id="close"><i class="ri-close-line"></i></a>
+        
+        
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+        
+            </div>
+        </Section>
+        <main>
+            <!-- sorting -->
+            <div class="prods-parent-sorting">
+                <h1 class="name">Products</h1>
+                <button class="add">Add Product<i class="ri-add-fill"></i></button>
+                <form action="">
+                    <input type="search" placeholder="Enter Product Name">
+                    <input type="button" value="search" class="search">
+                </form>
+                <div class="prods-category">
+                    Category
+                    <button type="submit"><i class="ri-arrow-down-s-line"></i></button>
+                </div>
+                <div class="prods-collectionType">
+                    CollectionType
+                    <button type="submit"><i class="ri-layout-grid-line"></i></button>
+                </div>
+                <div class="prods-price">
+                    Price
+                    <button type="submit"><i class="ri-arrow-down-s-line"></i></button>
+                </div>
+            </div>
+            <div class="prod-lists">
+                <ul class="price-list Hidden">
+                    <li><a href="">20-30</a></li>
+                    <li><a href="">30-50</a></li>
+                    <li><a href="">50-70</a></li>
+                    <li class="last"><a href="">70-100</a></li>
+                </ul>
+                <ul class="category-list Hidden">
+                    <li><a href="">Hats</a></li>
+                    <li><a href="">Pants</a></li>
+                    <li><a href="">Jackets</a></li>
+                    <li class="last"><a href="">Shoes</a></li>
+                </ul>
+            </div>
+            <!-- products -->
+            <div class="prod-container">
+                <!-- <div class="box">
+                    <img src="images/levis-mens-502-taper-jeans-295071350_14_Details.png" alt="">
+                    <div class="prod-info">
+                        <div class="seller-icons">
+                            <i class="ri-edit-fill edit"></i>
+                            <i class="ri-delete-bin-fill delete"></i>
+                        </div>
+                        <h2 class="prod-title">Jeans</h2>
+                        <p class="prod-category">Pants</p>
+                        <span class="prod-rating"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span>
+                        <span class="prod-price">33$</span>
+                        
+                    </div>
+                </div> -->
+            </div>
+        </main>
+        <script src="https://kit.fontawesome.com/8a06674c3b.js" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>
