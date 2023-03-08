@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/addProduct.css">
+    <title>Document</title>
+</head>
+<body>
+            <Section id="header">
+                <!--i need apropriate logo to add instead of this-->
+                <a href="#"><img src="/images/Logo.png" class="logo" alt=""></a>
+            
+                <div>
+                    <ul id="navbar">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <!--Here, we will ad the links after we make the products, cart, and userbar html files, so I'll leav thme without links for now-->
+                        <!--the links here are not real they are just placeholders-->
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html" id="lg-bag"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
+                        <a href="#" id="close"><i class="ri-close-line"></i></a>
+            
+            
+                    </ul>
+                </div>
+                <div id="mobile">
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <i id="bar" class="fas fa-outdent"></i>
+            
+                </div>
+            </Section>
+            <main>
+                <form action="">
+                    <h2 class="title">Basic Form</h2>
+                    <label for="Product-name">Product Name</label>
+                    <input type="text"  id="Product-name">
+                    <label for="Category-name">Category Name</label>
+                    <input type="text" name="Category-name" id="Category-name">
+                    <label for="Product-Price">Product Price</label>
+                    <input type="number"  id="Product-Price">
+                    <label for="Product-image">Product Image</label>
+                    <input type="url" id="Product-image">
+                    <div class="add-cancel">
+                        <button class="add">Add Product</button>
+                        <button class="cancel">Cancel</button>
+                    </div>
+                </form>
+            </main>
+        <script src="https://kit.fontawesome.com/8a06674c3b.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
