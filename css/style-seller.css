@@ -273,7 +273,7 @@ main .prods-collectionType {
 }  
 
 /* Start list container */
-   /* .list-container {
+   .list-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -326,7 +326,7 @@ main .prods-collectionType {
     border-radius: 8px;
     color: var(--cart-color);
 
-}   */
+}  
 /* End List */
 /* ******** */
 .prod-lists {

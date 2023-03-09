@@ -10,7 +10,6 @@
 let productItems = JSON.parse(localStorage.getItem("products"));
 if (productItems == null) {
   productItems = [];
-  console.log("here ");
 }
 const addButton = document.querySelector(".add");
 let priceRange = document.querySelectorAll(".price-list li");
@@ -23,6 +22,8 @@ const nameInput = document.querySelector("#Product-name");
 const categoryInput = document.querySelector("#Category-name");
 const priceInput = document.querySelector("#Product-Price");
 const imageInput = document.querySelector("#Product-image");
+const collectionType = document.querySelector(".prods-collectionType");
+const productContainer = document.querySelector(".prod-container");
 // toggle to show price dropdown list
 priceBtn.onclick = () => priceList.classList.toggle("Hidden");
 
@@ -34,7 +35,6 @@ let searchInput = document.querySelector(".search-input");
 
 //displayProducts is a impure function that create html elements.
 function displayProducts(array) {
-  const productContainer = document.querySelector(".prod-container");
   productContainer.textContent = "";
   if (array) {
     // creating product HTML
@@ -102,7 +102,7 @@ function displayProducts(array) {
         const id = productCard.getAttribute("id");
         let result = deleteProduct(productItems, id);
         localStorage.setItem("products", JSON.stringify(result));
-        //displayProducts(result);
+        displayProducts(result);
       });
     });
   }
@@ -127,3 +127,8 @@ categories.forEach((category) => {
   category.onclick = () =>
     displayProducts(categoryFilter(productItems, category.innerHTML));
 });
+
+collectionType.onclick = () => {
+  productContainer.classList.toggle("prod-container");
+  productContainer.classList.toggle("list-container");
+};
